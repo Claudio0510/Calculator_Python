@@ -1,0 +1,336 @@
+#To load the screen library
+import tkinter as tk 
+
+#Bool to controll the number 
+First_Number = False
+
+#These are the bools to controll what is going on , on the calculator
+Plus_Bool = False
+Minus_Bool = False
+Multiply_Bool = False
+Division_Bool = False
+
+#These are the numbers to make the calculator work 
+
+Number_First = 0
+Number_Second = 0
+Number_Result = 0
+
+
+
+
+#Create the screen 
+Screen_Main = tk.Tk()
+
+
+
+
+#This is the function to update the number on the screen 
+def Update_Screen(value):
+    Entry.delete(0, tk.END) 
+    Entry.insert(0, str(value)) 
+
+
+
+def Number_1():
+
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 1
+        print(Number_First)
+        Update_Screen(Number_First)  # Update screen 
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 1
+        print(Number_Second)
+        Update_Screen(Number_Second)  # Update screen 
+
+
+
+
+def Number_2():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 2
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 2
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+
+def Number_3():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 3
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 3
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+
+def Number_4():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 4
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 4
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+
+def Number_5():
+    global First_Number
+    if First_Number is False:
+    
+            global Number_First
+            Number_First = (Number_First * 10) + 5
+            print(Number_First)
+            Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+            global Number_Second
+            Number_Second = (Number_Second * 10) + 5
+            print(Number_Second)
+            Update_Screen(Number_Second)
+
+
+
+def Number_6():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 6
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+            global Number_Second
+            Number_Second = (Number_Second * 10) + 6
+            print(Number_Second)
+            Update_Screen(Number_Second)
+
+
+def Number_7():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 7
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 7
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+def Number_8():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 8
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 8
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+def Number_9():
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10) + 9
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10) + 9
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+
+def Number_0():
+
+    global First_Number
+    if First_Number is False:
+    
+        global Number_First
+        Number_First = (Number_First * 10)
+        print(Number_First)
+        Update_Screen(Number_First)
+
+    elif First_Number is True:
+
+        global Number_Second
+        Number_Second = (Number_Second * 10)
+        print(Number_Second)
+        Update_Screen(Number_Second)
+
+
+def Plus():
+    global First_Number
+    First_Number = True
+   
+    global Plus_Bool
+    Plus_Bool = True
+
+    
+
+
+def Minus():
+    global First_Number
+    First_Number = True
+   
+    global Minus_Bool
+    Minus_Bool = True
+
+
+def Multiply():
+    global First_Number
+    First_Number = True
+   
+    global Multiply_Bool
+    Multiply_Bool = True
+
+
+def Division():
+    global First_Number
+    First_Number = True
+
+    global Division_Bool
+    Division_Bool = True
+   
+
+
+def Result():
+
+    global Minus_Bool
+    global Multiply_Bool
+    global Plus_Bool
+    global Division_Bool
+    global Number_result
+
+    if Plus_Bool is True:
+        Number_Result =  Number_First + Number_Second
+        Update_Screen(Number_result)
+        print(Number_result)
+        
+    
+    elif Minus_Bool is True:
+        Number_result = Number_First - Number_Second
+        Update_Screen(Number_result)
+        print(Number_result)
+
+    elif Multiply_Bool is True:
+        Number_result = Number_First * Number_Second
+
+        Update_Screen(Number_result)
+        print(Number_result)
+
+    elif Division_Bool is True:
+        Number_result = Number_First / Number_Second
+
+        Update_Screen(Number_result)
+        print(Number_result)
+
+    
+
+#Putt the tittle on the screen 
+Screen_Main.title("Calculator")
+Screen_Main.geometry("500x800")
+
+#To putt the place to show up the numbers 
+Entry = tk.Entry(Screen_Main, width= 75)
+Entry.place(x = 25 , y = 50, height= 95)
+
+
+
+#Puttt the butttons on the screen 
+Button_1 = tk.Button(Screen_Main , text = "1", command= Number_1)
+Button_1.place(x=50 , y = 150, width= 50 , height= 50)
+
+Button_2 = tk.Button(Screen_Main , text = "2", command= Number_2 )
+Button_2.place(x=150 , y = 150, width= 50 , height= 50)
+
+Button_3 = tk.Button(Screen_Main , text = "3",command= Number_3)
+Button_3.place(x=250 , y = 150, width= 50 , height= 50)
+
+Button_Plus = tk.Button(Screen_Main , text = "+", command = Plus)
+Button_Plus.place(x=350 , y = 150, width= 50 , height= 50)
+
+Button_4 = tk.Button(Screen_Main , text = "4", command= Number_4)
+Button_4.place(x=50 , y = 250, width= 50 , height= 50)
+
+Button_5 = tk.Button(Screen_Main , text = "5", command= Number_5)
+Button_5.place(x=150 , y = 250, width= 50 , height= 50)
+
+Button_6 = tk.Button(Screen_Main , text = "6",command= Number_6)
+Button_6.place(x=250 , y = 250, width= 50 , height= 50)
+
+Button_Minus = tk.Button(Screen_Main , text = "-", command= Minus)
+Button_Minus.place(x=350 , y = 250, width= 50 , height= 50)
+
+Button_7 = tk.Button(Screen_Main , text = "7", command= Number_7)
+Button_7.place(x=50 , y = 350, width= 50 , height= 50)
+
+Button_8 = tk.Button(Screen_Main , text = "8", command= Number_8)
+Button_8.place(x=150 , y = 350, width= 50 , height= 50)
+
+Button_9 = tk.Button(Screen_Main , text = "9", command= Number_9)
+Button_9.place(x=250 , y = 350, width= 50 , height= 50)
+
+Button_Multiply = tk.Button(Screen_Main , text = "x", command= Multiply)
+Button_Multiply.place(x=350 , y = 350, width= 50 , height= 50)
+
+Button_0 = tk.Button(Screen_Main , text = "0", command= Number_0)
+Button_0.place(x=150 , y = 450, width= 50 , height= 50)
+
+Button_Divide = tk.Button(Screen_Main , text = "/" , command = Division)
+Button_Divide.place(x=250 , y = 450, width= 50 , height= 50)
+
+Button_Result = tk.Button(Screen_Main , text = "=" , command= Result)
+Button_Result.place(x=50 , y = 450, width= 50 , height= 50)
+
+
+
+
+#Make work the screen 
+Screen_Main.mainloop()
